@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Reservas
+    </title>
+    
+    <!--
+    <link rel="stylesheet" type="text/css" media="screen" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+    <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+          
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="./css/base.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.css" rel="stylesheet">
+
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+    -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.js" integrity="sha256-2JRzNxMJiS0aHOJjG+liqsEOuBb6++9cY4dSOyiijX4=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <!--{% include './nav.html'%}-->
+    <form method="post" action="">
+        
+        <div class="jumbotron text-center">
+            <h1>Cabecera</h1>            
+        </div>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown"><a href="#datepicker.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Docencia</a>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">Practicas</a>
+                        <a href="#" class="dropdown-item">Hw y Sw de laboratorios</a>
+                        <a href="#" class="dropdown-item">Sw para practicas</a>
+                        <a href="#" class="dropdown-item">TP-6</a>
+                        <a href="#" class="dropdown-item">P.O.D.</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown"><a href="#datepicker.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Actividades</a>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">Publicaciones</a>
+                        <a href="#" class="dropdown-item">Memorias Anuales</a>
+                        <a href="#" class="dropdown-item">Docentes de Investigación</a>
+                    </div>                     
+                </li>
+                <li class="nav-item dropdown"><a href="#datepicker.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Anuncios</a>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">Listas y Otros</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown"><a href="#datepicker.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Recursos</a>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">Reserva de Espacios</a>
+                        <a href="#" class="dropdown-item">Plano de DIIS</a>
+                        <a href="#" class="dropdown-item">Normativa Económica</a>
+                        <a href="#" class="dropdown-item">Identidad Corporativa</a>
+                        <a href="#" class="dropdown-item">Hardware</a>
+                        <a href="#" class="dropdown-item">Software</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown"><a href="#datepicker.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Servicios</a>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">Información</a>
+                        <a href="#" class="dropdown-item">Wiki</a>
+                        <a href="#" class="dropdown-item">Soporte del PAS</a>
+                        <a href="#" class="dropdown-item">Parte de Incidencia</a>
+                    </div>
+                </li>
+
+              </ul>
+            </div>  
+        </nav>
+        <div class="container-sm" style="margin-top:30px" style="background-color: yellow;">
+            <div class="row">
+            <!--<div class="col-2" style="background-color: lightblue;">
+                
+                <ul class="nav nav-justified">
+                    <li class="nav-item dropdown"><a href="#datepicker.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Docencia</a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">Practicas</a>
+                            <a href="#" class="dropdown-item">Hw y Sw de laboratorios</a>
+                            <a href="#" class="dropdown-item">Sw para practicas</a>
+                            <a href="#" class="dropdown-item">TP-6</a>
+                            <a href="#" class="dropdown-item">P.O.D.</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown"><a href="#datepicker.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Actividades</a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">Publicaciones</a>
+                            <a href="#" class="dropdown-item">Memorias Anuales</a>
+                            <a href="#" class="dropdown-item">Docentes de Investigación</a>
+                        </div>                     
+                    </li>
+                    <li class="nav-item dropdown"><a href="#datepicker.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Anuncios</a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">Listas y Otros</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown"><a href="#datepicker.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Recursos</a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">Reserva de Espacios</a>
+                            <a href="#" class="dropdown-item">Plano de DIIS</a>
+                            <a href="#" class="dropdown-item">Normativa Económica</a>
+                            <a href="#" class="dropdown-item">Identidad Corporativa</a>
+                            <a href="#" class="dropdown-item">Hardware</a>
+                            <a href="#" class="dropdown-item">Software</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown"><a href="#datepicker.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Servicios</a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">Información</a>
+                            <a href="#" class="dropdown-item">Wiki</a>
+                            <a href="#" class="dropdown-item">Soporte del PAS</a>
+                            <a href="#" class="dropdown-item">Parte de Incidencia</a>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>-->
+            <div class="col-12">
+                <h1>Todas las RESERVAS de {{ data2.personas.nombre_completo}}</h1>
+                <table class='table'>
+                    <tr>
+                        <td>FECHA INICIO</td>
+                        <td>FECHA FIN</td>
+                        <td>SALA</td>
+                        <td>OBSERVACIONES</td>
+                    </tr>
+                    {% for l in data.reservas %}
+                    <tr>
+                        <td>{{ l.finicio }}</td>
+                        <td>{{ l.ffin }}</td>
+                        <td>{{ l.idespacio }}</td>
+                        <td>{{ l.observaciones }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+                <h1>Nueva Reserva</h1>
+                <table class='table'>
+                    <tr>
+                        <td>Espacio a reservar:</td>
+                        <td>
+                            <select class="form-control" id="espacios" name='nbespacios'>
+                                {% for l in data3.espacios %}
+                                    <option>{{ l.nbespacios }}</option>
+                                {% endfor %}                            
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>                    
+                            <!--<div class='col-md-5'>-->
+                            
+                                <!--<div class='input-group date' id='datetimepicker6' data-datepicker-format="dd-mm-yyyy">
+                                    <input name='inicio' type='text' class="form-control" size='200' />
+                                    <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>-->
+                            
+                            <div class="row">                                
+                                <div class="form-group">
+                                    <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+                                    <input name='inicio' type="text" class="form-control datetimepicker-input" data-target="#datetimepicker1" />
+                                    <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
+                                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                    </div>
+                                    </div>
+                                
+                                </div>                            
+                            </div>
+                            
+                        </td>
+                        <td>
+                            
+                            <!--<div class='col-md-5'>-->
+                                <!--<div class='input-group date' id='datetimepicker7' data-datepicker-format="dd-mm-yyyy">
+                                    <input name='fin' type='text' class="form-control" size='200'  />
+                                    <span class="input-group-addon"> 
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                            </div>-->
+                            
+                            <div class="row">
+                                
+                                <div class="form-group">
+                                    <div class="input-group date" id="datetimepicker2" data-target-input="nearest">
+                                    <input name='fin' type="text" class="form-control datetimepicker-input" data-target="#datetimepicker2" />
+                                    <div class="input-group-append" data-target="#datetimepicker2" data-toggle="datetimepicker">
+                                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                    </div>
+                                    </div>
+                                
+                                </div>
+                                
+                            </div>
+                            
+                        </td>
+                        <script type="text/javascript">
+                            $(document).ready(function () {
+                                $('#datetimepicker1').datetimepicker({
+                                    daysOfWeekDisabled: [0, 6],
+                                    format: 'YYYY-MM-DD HH:mm:00',
+                                    locale: 'es'
+                                }); 
+                                $('#datetimepicker2').datetimepicker({
+                                    daysOfWeekDisabled: [0, 6],
+                                    format: 'YYYY-MM-DD HH:mm:00',
+                                    locale: 'es',
+                                    useCurrent: true
+                                });                          
+                                $("#datetimepicker1").on("change.datetimepicker", function (e) {
+                                    $('#datetimepicker2').datetimepicker('minDate', e.date);
+                                });
+                                $("#datetimepicker2").on("change.datetimepicker", function (e) {
+                                    $('#datetimepicker1').datetimepicker('maxDate', e.date);
+                                });
+                            });
+                        </script>
+                    </tr>
+                    <tr>
+                        <td>Observaciones:</td>           
+                        <td><textarea class="form-control" rows="5" id="comment"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" id="registrar" name="nuevaReserva" value="Registrar" />
+                        </td>
+                    </tr>
+                </table> 
+            </div>
+        </div>
+        </div>      
+    </form>  
+</body>
+</html>
